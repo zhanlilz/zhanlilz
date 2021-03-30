@@ -18,7 +18,7 @@ tags:
 - '"Forestry"'
 - '"Instruments"'
 - '"laser beams"'
-- '"laser measurements."'
+- '"laser measurements"'
 - '"Laser radar"'
 - '"Trajectory"'
 - '"Uncertainty"'
