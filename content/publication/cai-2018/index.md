@@ -1,0 +1,86 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: A high-performance and in-season classification system of field-level crop
+  types using time-series Landsat data and a machine learning approach
+subtitle: ''
+summary: ''
+authors:
+- Yaping Cai
+- Kaiyu Guan
+- Jian Peng
+- Shaowen Wang
+- Christopher Seifert
+- Brian Wardlow
+- Zhan Li
+tags:
+- '"Crop type classification"'
+- '"Deep Neural Network (DNN)"'
+- '"Machine learning"'
+- '"Phenology"'
+- '"Remote sensing"'
+categories: []
+date: '2018-01-01'
+lastmod: 2021-03-30T23:31:33+02:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+publishDate: '2021-03-30T21:31:29.707518Z'
+publication_types:
+- '2'
+abstract: Accurate and timely spatial classification of crop types based on remote
+  sensing data is important for both scientific and practical purposes. Spatially
+  explicit crop-type information can be used to estimate crop areas for a variety
+  of monitoring and decision-making applications such as crop insurance, land rental,
+  supply-chain logistics, and financial market forecasting. However, there is no publically
+  available spatially explicit in-season crop-type classification information for
+  the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers
+  and decision-makers have to wait until four to six months after harvest to have
+  such information from the previous year. The state-of-the-art research on crop-type
+  classification has been shifted from relying on only spectral features of single
+  static images to combining together spectral and time-series information. While
+  Landsat data have a desirable spatial resolution for field-level crop-type classification,
+  the ability to extract temporal phenology information based on Landsat data remains
+  a challenge due to low temporal revisiting frequency and inevitable cloud contamination.
+  To address this challenge and generate accurate, cost-effective, and in-season crop-type
+  classification, this research uses the USDA's Common Land Units (CLUs) to aggregate
+  spectral information for each field based on a time-series Landsat image data stack
+  to largely overcome the cloud contamination issue while exploiting a machine learning
+  model based on Deep Neural Network (DNN) and high-performance computing for intelligent
+  and scalable computation of classification processes. Experiments were designed
+  to evaluate what information is most useful for training the machine learning model
+  for crop-type classification, and how various spatial and temporal factors affect
+  the crop-type classification performance in order to derive timely crop type information.
+  All experiments were conducted over Champaign County located in central Illinois,
+  and a total of 1322 Landsat multi-temporal scenes including all the six optical
+  spectral bands spanning from 2000 to 2015 were used. Computational experiments show
+  the inclusion of temporal phenology information and evenly distributed spatial training
+  samples in the study domain improves classification performance. The shortwave infrared
+  bands show notably better performance than the widely used visible and near-infrared
+  bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer
+  (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the
+  corrected classified fields divided by the number of the total fields) of 96% for
+  classifying corn and soybean across all CLU fields in the Champaign County from
+  2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July
+  of the concurrent year for classifying corn and soybean. The findings suggest the
+  methodology presented in this paper is promising for accurate, cost-effective, and
+  in-season classification of field-level crop types, which may be scaled up to large
+  geographic extents such as the U.S. Corn Belt.
+publication: '*Remote Sensing of Environment*'
+url_pdf: http://www.sciencedirect.com/science/article/pii/S0034425718300610
+doi: https://doi.org/10.1016/j.rse.2018.02.045
+---

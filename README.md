@@ -33,3 +33,26 @@ To help us develop this template and software sustainably under the MIT license,
 - [Course](https://unsplash.com/photos/JKUTrJ4vK00)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/starter-academic/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+
+## My own notes/tips on using the Academic Template
+
+* content/publications: Add a pdf under a publication folder (e.g., li-2018)
+  named after this publication folder name (i.e., li-2018.pdf under
+  content/publication/li-2018). The pdf button on the publication page will give
+  users the pdf.
+
+* static/sub-folder-name: Files under this folder can be referred in the .md
+  files as sub-folder-name/a-file
+
+* menus.yaml: Change the ``weight`` property of each menu item to change its
+  display location on top of the home page. The larger the weight, the more
+  right / further back the item will be displayed.
+
+* content/home/tags.md: This is the word cloud displayed under "Popular Topics"
+  on the published page. It uses tags in all the .md files. Currently, most tags
+  are from the index.md files in the publication folders. 
+
+* Create a new post. For more details, https://wowchemy.com/docs/content/blog-posts/
+```
+$ hugo new --kind post post/my-article-name
+```
