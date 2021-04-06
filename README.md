@@ -66,3 +66,15 @@ To help us develop this template and software sustainably under the MIT license,
     ```
     $ hugo new --kind publication publication/<my-publication>
     ```
+
+* Highlight an author name.
+  * Edit the file `content/authors/<first_name>-<last_name>/_index.md`. In
+  the front matter of the .md file, add/change `highlight_name: true`. If the
+  author name in the index.md file of a publication appears as "first_name
+  last_name", then this author name will be automatically recognized as the
+  author in the folder `content/authors/<first_name>-<last_name>`. Otherwise,
+  you need to use `<first_name>-<last_name>` in the index.md file of a
+  publication.
+  * Tip: according to https://wowchemy.com/docs/getting-started/get-started/,
+  usernames (names of the folders under `content/authors/`) must be lowercase
+  with any spaces replaced with hyphens (-).
