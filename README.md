@@ -53,6 +53,16 @@ To help us develop this template and software sustainably under the MIT license,
   are from the index.md files in the publication folders. 
 
 * Create a new post. For more details, https://wowchemy.com/docs/content/blog-posts/
-```
-$ hugo new --kind post post/my-article-name
-```
+  ```
+  $ hugo new --kind post post/my-article-name
+  ```
+
+* Create a new publication. For more details, https://wowchemy.com/docs/content/publications/
+  * Import from a .bib file
+    ```
+    $ academic import --bibtex <path_to_your/publications.bib>
+    ```
+  * Mannually create one
+    ```
+    $ hugo new --kind publication publication/<my-publication>
+    ```
