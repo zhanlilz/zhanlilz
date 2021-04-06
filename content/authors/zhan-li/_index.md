@@ -70,7 +70,7 @@ social:
 email: ""
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 ---
 Zhan Li's research is currently focused on observing and understanding (1)
 changes in the structure and functioning of ecosystems, and (2) their impacts on

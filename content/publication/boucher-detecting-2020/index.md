@@ -18,18 +18,6 @@ authors:
 - Zhan Li
 - Arthur Elmes
 - Crystal Schaaf
-- B Peter Boucher
-- Steven Hancock
-- A David Orwig
-- Laura Duncanson
-- John Armston
-- Hao Tang
-- Keith Krause
-- Bruce Cook
-- Ian Paynter
-- Zhan Li
-- Arthur Elmes
-- Crystal Schaaf
 tags:
 - '"10"'
 - '"12"'
@@ -56,7 +44,7 @@ tags:
 - '"www"'
 categories: []
 date: '2020-01-01'
-lastmod: 2021-03-30T23:31:37+02:00
+lastmod: 2021-04-06T18:25:45+02:00
 featured: false
 draft: false
 
@@ -74,7 +62,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-03-30T21:31:37.113111Z'
+publishDate: '2021-04-06T16:25:44.821094Z'
 publication_types:
 - '2'
 abstract: The hemlock woolly adelgid (HWA; Adelges tsugae) is an invasive insect infestation

@@ -4,7 +4,7 @@
 title: "It's a start"
 subtitle: "A start albeit a small one"
 summary: "Maybe it's time to write some blog posts on my site. This is the first one to mark the start."
-authors: [admin]
+authors: [zhan-li]
 tags: []
 categories: []
 date: 2021-03-31T00:18:49+02:00
