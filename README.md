@@ -36,7 +36,7 @@ To help us develop this template and software sustainably under the MIT license,
 
 ## My own notes on quick start on a new Ubuntu computer
 1. Install Hugo
-    * Download hugo_VERSION_Linux-64bit.deb from https://github.com/gohugoio/hugo/releases
+    * Download hugo_**extended**_VERSION_Linux-64bit.deb from https://github.com/gohugoio/hugo/releases. Note that you have to get the **extended** version for the website based on Wowchemy template to work. 
     * Double click the .deb to install Hugo. 
 2. Install Hugo's Go dependency, in a terminal
 ```bash
