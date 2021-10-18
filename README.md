@@ -104,3 +104,14 @@ There are three branches,
   * Tip: according to https://wowchemy.com/docs/getting-started/get-started/,
   usernames (names of the folders under `content/authors/`) must be lowercase
   with any spaces replaced with hyphens (-).
+
+* Disable/Enable a widget (or visually a section on my website)
+For example, to disable the section **Post**, 
+  * go to `content/home/posts.md`, look for the following two lines
+    ```md
+    # Activate this widget? true/false
+    active: false
+    ```  
+    If `active: false`, the widget/section will not show on the website. If `active: true`, it will show. 
+  * Do NOT forget to edit `config/_default/menus.yaml` to remove this section
+  from the top menu if it was an item on the menu.
