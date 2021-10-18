@@ -6,7 +6,7 @@ title: Zhan Li
 superuser: true
 
 # Role/position/tagline
-role: Postdoctoral Scientist 
+role: Project Scientist 
 
 # Organizations/Affiliations to show in About widget
 organizations:

@@ -26,7 +26,7 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
   - company: Helmholtz Centre for Environmental Sciences - UFZ
-    title: Postdoctoral Scientist
+    title: Project Scientist
     company_url: 'https://www.ufz.de/index.php?en=33573'
     location: Leipzig, Germany
     date_start: '2021-01-01'
