@@ -59,6 +59,7 @@ There are three branches,
     # In the top directory of the website repository
     ./view.sh
     ```
+6. Update the Wowchemy website components that my website uses, refer to https://wowchemy.com/docs/hugo-tutorials/update/
 
 ## My own notes/tips on using the Academic Template
 
