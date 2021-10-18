@@ -1,15 +1,317 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.1.0 for Hugo"><meta name=author content="Zhan Li"><meta name=description content="Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA's Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt."><link rel=alternate hreflang=en-us href=https://zhanlilz.github.io/publication/cai-2018/><link rel=preconnect href=https://fonts.gstatic.com crossorigin><meta name=theme-color content="#1565c0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin=anonymous media=print onload="this.media='all'"><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'"><link rel=stylesheet href=/css/wowchemy.9a66e344a68eb664b392d406a3f80726.css><link rel=manifest href=/index.webmanifest><link rel=icon type=image/png href=/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png><link rel=canonical href=https://zhanlilz.github.io/publication/cai-2018/><meta property="twitter:card" content="summary"><meta property="og:site_name" content="Zhan Li"><meta property="og:url" content="https://zhanlilz.github.io/publication/cai-2018/"><meta property="og:title" content="A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach | Zhan Li"><meta property="og:description" content="Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA's Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt."><meta property="og:image" content="https://zhanlilz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="twitter:image" content="https://zhanlilz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2021-03-30T21:31:29+00:00"><meta property="article:modified_time" content="2021-03-30T23:31:33+02:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhanlilz.github.io/publication/cai-2018/"},"headline":"A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach","datePublished":"2021-03-30T21:31:29Z","dateModified":"2021-03-30T23:31:33+02:00","author":{"@type":"Person","name":"Yaping Cai"},"publisher":{"@type":"Organization","name":"Zhan Li","logo":{"@type":"ImageObject","url":"https://zhanlilz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"}},"description":"Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA's Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt."}</script><title>A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach | Zhan Li</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=74450069e07d02034165975d05c53ef7><script src=/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js></script><aside class=search-modal id=search><div class=container><section class=search-header><div class="row no-gutters justify-content-between mb-3"><div class=col-6><h1>Search</h1></div><div class="col-6 col-search-close"><a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a></div></div><div id=search-box><input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...></div></section><section class=section-search-results><div id=search-hits></div></section></div></aside><div class=page-header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/>Zhan Li</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/>Zhan Li</a></div><div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/#about><span>Home</span></a></li><li class=nav-item><a class=nav-link href=/#projects><span>Projects</span></a></li><li class=nav-item><a class=nav-link href=/#publications><span>Publications</span></a></li><li class=nav-item><a class=nav-link href=/#posts><span>Posts</span></a></li><li class=nav-item><a class=nav-link href=/#contact><span>Contact</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class=nav-item><a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a></li><li class="nav-item dropdown theme-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences"><i class="fas fa-moon" aria-hidden=true></i></a><div class=dropdown-menu><a href=# class="dropdown-item js-set-theme-light"><span>Light</span></a>
-<a href=# class="dropdown-item js-set-theme-dark"><span>Dark</span></a>
-<a href=# class="dropdown-item js-set-theme-auto"><span>Automatic</span></a></div></li></ul></div></nav></div><div class=page-body><div class=pub><div class="article-container pt-3"><h1>A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach</h1><div class=article-metadata><div><span>Yaping Cai</span>, <span>Kaiyu Guan</span>, <span>Jian Peng</span>, <span>Shaowen Wang</span>, <span>Christopher Seifert</span>, <span>Brian Wardlow</span>, <span class=author-highlighted>Zhan Li</span></div><span class=article-date>January 2018</span></div><div class="btn-links mb-3"><a class="btn btn-outline-primary btn-page-header" href=http://www.sciencedirect.com/science/article/pii/S0034425718300610 target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/cai-2018/cite.bib>Cite</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://doi.org/https://doi.org/10.1016/j.rse.2018.02.045 target=_blank rel=noopener>DOI</a></div></div><div class=article-container><h3>Abstract</h3><p class=pub-abstract>Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA&rsquo;s Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA&rsquo;s Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt.</p><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">Type</div><div class="col-12 col-md-9"><a href=/publication/#2>Journal article</a></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">Publication</div><div class="col-12 col-md-9"><em>Remote Sensing of Environment</em></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=space-below></div><div class=article-style></div><div class=article-tags><a class="badge badge-light" href=/tag/crop-type-classification/>"Crop type classification"</a>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.3.0 for Hugo">
+<meta name=author content="Zhan Li">
+<meta name=description content="Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA's Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt.">
+<link rel=alternate hreflang=en-us href=https://zhanlilz.github.io/publication/cai-2018/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="#1565c0">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<link rel=stylesheet href=/css/wowchemy.f0cf03b20998d63e314819fa4a90c13f.css>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://zhanlilz.github.io/publication/cai-2018/>
+<meta property="twitter:card" content="summary">
+<meta property="og:site_name" content="Zhan Li">
+<meta property="og:url" content="https://zhanlilz.github.io/publication/cai-2018/">
+<meta property="og:title" content="A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach | Zhan Li">
+<meta property="og:description" content="Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA's Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt."><meta property="og:image" content="https://zhanlilz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="https://zhanlilz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2021-03-30T21:31:29+00:00">
+<meta property="article:modified_time" content="2021-03-30T23:31:33+02:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhanlilz.github.io/publication/cai-2018/"},"headline":"A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach","datePublished":"2021-03-30T21:31:29Z","dateModified":"2021-03-30T23:31:33+02:00","author":{"@type":"Person","name":"Yaping Cai"},"publisher":{"@type":"Organization","name":"Zhan Li","logo":{"@type":"ImageObject","url":"https://zhanlilz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"}},"description":"Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA's Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA's Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt."}</script>
+<title>A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach | Zhan Li</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=74450069e07d02034165975d05c53ef7>
+<script src=/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Zhan Li</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Zhan Li</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#projects><span>Projects</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact><span>Contact</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<div class=pub>
+<div class="article-container pt-3">
+<h1>A high-performance and in-season classification system of field-level crop types using time-series Landsat data and a machine learning approach</h1>
+<div class=article-metadata>
+<div>
+<span>
+Yaping Cai</span>, <span>
+Kaiyu Guan</span>, <span>
+Jian Peng</span>, <span>
+Shaowen Wang</span>, <span>
+Christopher Seifert</span>, <span>
+Brian Wardlow</span>, <span class=author-highlighted>
+Zhan Li</span>
+</div>
+<span class=article-date>
+January 2018
+</span>
+</div>
+<div class="btn-links mb-3">
+<a class="btn btn-outline-primary btn-page-header" href=http://www.sciencedirect.com/science/article/pii/S0034425718300610 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/cai-2018/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header" href=https://doi.org/https://doi.org/10.1016/j.rse.2018.02.045 target=_blank rel=noopener>
+DOI
+</a>
+</div>
+</div>
+<div class=article-container>
+<h3>Abstract</h3>
+<p class=pub-abstract>Accurate and timely spatial classification of crop types based on remote sensing data is important for both scientific and practical purposes. Spatially explicit crop-type information can be used to estimate crop areas for a variety of monitoring and decision-making applications such as crop insurance, land rental, supply-chain logistics, and financial market forecasting. However, there is no publically available spatially explicit in-season crop-type classification information for the U.S. Corn Belt (a landscape predominated by corn and soybean). Instead, researchers and decision-makers have to wait until four to six months after harvest to have such information from the previous year. The state-of-the-art research on crop-type classification has been shifted from relying on only spectral features of single static images to combining together spectral and time-series information. While Landsat data have a desirable spatial resolution for field-level crop-type classification, the ability to extract temporal phenology information based on Landsat data remains a challenge due to low temporal revisiting frequency and inevitable cloud contamination. To address this challenge and generate accurate, cost-effective, and in-season crop-type classification, this research uses the USDA&rsquo;s Common Land Units (CLUs) to aggregate spectral information for each field based on a time-series Landsat image data stack to largely overcome the cloud contamination issue while exploiting a machine learning model based on Deep Neural Network (DNN) and high-performance computing for intelligent and scalable computation of classification processes. Experiments were designed to evaluate what information is most useful for training the machine learning model for crop-type classification, and how various spatial and temporal factors affect the crop-type classification performance in order to derive timely crop type information. All experiments were conducted over Champaign County located in central Illinois, and a total of 1322 Landsat multi-temporal scenes including all the six optical spectral bands spanning from 2000 to 2015 were used. Computational experiments show the inclusion of temporal phenology information and evenly distributed spatial training samples in the study domain improves classification performance. The shortwave infrared bands show notably better performance than the widely used visible and near-infrared bands for classifying corn and soybean. In comparison with USDA&rsquo;s Crop Data Layer (CDL), this study found a relatively high Overall Accuracy (i.e. the number of the corrected classified fields divided by the number of the total fields) of 96% for classifying corn and soybean across all CLU fields in the Champaign County from 2000 to 2015. Furthermore, our approach achieved 95% Overall Accuracy by late July of the concurrent year for classifying corn and soybean. The findings suggest the methodology presented in this paper is promising for accurate, cost-effective, and in-season classification of field-level crop types, which may be scaled up to large geographic extents such as the U.S. Corn Belt.</p>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Type</div>
+<div class="col-12 col-md-9">
+<a href=/publication/#2>
+Journal article
+</a>
+</div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Publication</div>
+<div class="col-12 col-md-9"><em>Remote Sensing of Environment</em></div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=space-below></div>
+<div class=article-style></div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/crop-type-classification/>"Crop type classification"</a>
 <a class="badge badge-light" href=/tag/deep-neural-network-dnn/>"Deep Neural Network (DNN)"</a>
 <a class="badge badge-light" href=/tag/machine-learning/>"Machine learning"</a>
 <a class="badge badge-light" href=/tag/phenology/>"Phenology"</a>
-<a class="badge badge-light" href=/tag/remote-sensing/>"Remote sensing"</a></div><div class=share-box aria-hidden=true><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https://zhanlilz.github.io/publication/cai-2018/&text=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https://zhanlilz.github.io/publication/cai-2018/&t=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-facebook><i class="fab fa-facebook"></i></a></li><li><a href="mailto:?subject=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach&body=https://zhanlilz.github.io/publication/cai-2018/" target=_blank rel=noopener class=share-btn-email><i class="fas fa-envelope"></i></a></li><li><a href="https://www.linkedin.com/shareArticle?url=https://zhanlilz.github.io/publication/cai-2018/&title=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-linkedin><i class="fab fa-linkedin-in"></i></a></li><li><a href="whatsapp://send?text=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach%20https://zhanlilz.github.io/publication/cai-2018/" target=_blank rel=noopener class=share-btn-whatsapp><i class="fab fa-whatsapp"></i></a></li><li><a href="https://service.weibo.com/share/share.php?url=https://zhanlilz.github.io/publication/cai-2018/&title=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-weibo><i class="fab fa-weibo"></i></a></li></ul></div><div class="media author-card content-widget-hr"><a href=https://zhanlilz.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/zhan-li/avatar_zhan_li_hu6894857f7341238c789449334a865bb4_215576_270x270_fill_q75_lanczos_center.jpg alt="Zhan Li"></a><div class=media-body><h5 class=card-title><a href=https://zhanlilz.github.io/>Zhan Li</a></h5><h6 class=card-subtitle>Postdoctoral Scientist</h6><p class=card-text>A technologist, environmentalist, and sometimes idealist.</p><ul class=network-icon aria-hidden=true><li><a href=/#contact><i class="fas fa-envelope"></i></a></li><li><a href="https://scholar.google.com/citations?user=JGNL9BoAAAAJ" target=_blank rel=noopener><i class="ai ai-google-scholar"></i></a></li><li><a href=https://orcid.org/0000-0001-6307-5200 target=_blank rel=noopener><i class="ai ai-orcid"></i></a></li><li><a href="https://www.scopus.com/authid/detail.uri?authorId=36193003800" target=_blank rel=noopener><i class="ai ai-scopus"></i></a></li><li><a href=https://github.com/zhanlilz target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li><a href=https://twitter.com/zhanlilz target=_blank rel=noopener><i class="fab fa-twitter"></i></a></li><li><a href=/media/zhan_li_cv.pdf><i class="ai ai-cv"></i></a></li></ul></div></div><div class="article-widget content-widget-hr"><h3>Related</h3><ul><li><a href=/publication/hui-2013/>An improved Landsat Image Mosaic of Antarctica</a></li><li><a href=/publication/wang-2012/>Lake Water Footprint Identification from Time-Series ICESat/GLAS Data</a></li><li><a href=/publication/douglas-2015/>Finding Leaves in the Forest: The Dual-Wavelength Echidna Lidar</a></li><li><a href=/publication/guan-2018/>Mapping Paddy Rice Area and Yields Over Thai Binh Province in Viet Nam From MODIS, Landsat, and ALOS-2/PALSAR-2</a></li><li><a href=/publication/liu-2015/>Joint Use of ICESat/GLAS and Landsat Data in Land Cover Classification: A Case Study in Henan Province, China</a></li></ul></div></div></div></div><div class=page-footer><div class=container><footer class=site-footer><p class=powered-by>© 2021 Zhan Li</p><p class=powered-by>Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.</p></footer></div></div><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>Cite</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code class="tex hljs"></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> Copy</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> Download</a><div id=modal-error></div></div></div></div></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin=anonymous></script><script id=search-hit-fuse-template type=text/x-template>
+<a class="badge badge-light" href=/tag/remote-sensing/>"Remote sensing"</a>
+</div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://zhanlilz.github.io/publication/cai-2018/&text=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://zhanlilz.github.io/publication/cai-2018/&t=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach&body=https://zhanlilz.github.io/publication/cai-2018/" target=_blank rel=noopener class=share-btn-email>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://zhanlilz.github.io/publication/cai-2018/&title=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-linkedin>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach%20https://zhanlilz.github.io/publication/cai-2018/" target=_blank rel=noopener class=share-btn-whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://zhanlilz.github.io/publication/cai-2018/&title=A%20high-performance%20and%20in-season%20classification%20system%20of%20field-level%20crop%20types%20using%20time-series%20Landsat%20data%20and%20a%20machine%20learning%20approach" target=_blank rel=noopener class=share-btn-weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://zhanlilz.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/zhan-li/avatar_zhan_li_hu6894857f7341238c789449334a865bb4_215576_270x270_fill_q75_lanczos_center.jpg alt="Zhan Li"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://zhanlilz.github.io/>Zhan Li</a></h5>
+<h6 class=card-subtitle>Project Scientist</h6>
+<p class=card-text>A technologist, environmentalist, and sometimes idealist.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=/#contact>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=JGNL9BoAAAAJ" target=_blank rel=noopener>
+<i class="ai ai-google-scholar"></i>
+</a>
+</li>
+<li>
+<a href=https://orcid.org/0000-0001-6307-5200 target=_blank rel=noopener>
+<i class="ai ai-orcid"></i>
+</a>
+</li>
+<li>
+<a href="https://www.scopus.com/authid/detail.uri?authorId=36193003800" target=_blank rel=noopener>
+<i class="ai ai-scopus"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/zhanlilz target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/zhanlilz target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href=/media/zhan_li_cv.pdf>
+<i class="ai ai-cv"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="article-widget content-widget-hr">
+<h3>Related</h3>
+<ul>
+<li><a href=/publication/hui-2013/>An improved Landsat Image Mosaic of Antarctica</a></li>
+<li><a href=/publication/wang-2012/>Lake Water Footprint Identification from Time-Series ICESat/GLAS Data</a></li>
+<li><a href=/publication/douglas-2015/>Finding Leaves in the Forest: The Dual-Wavelength Echidna Lidar</a></li>
+<li><a href=/publication/guan-2018/>Mapping Paddy Rice Area and Yields Over Thai Binh Province in Viet Nam From MODIS, Landsat, and ALOS-2/PALSAR-2</a></li>
+<li><a href=/publication/liu-2015/>Joint Use of ICESat/GLAS and Landsat Data in Land Cover Classification: A Case Study in Henan Province, China</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+© 2021 Zhan Li
+</p>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin=anonymous></script>
+<script id=search-hit-fuse-template type=text/x-template>
         <div class="search-hit" id="summary-{{key}}">
           <div class="search-hit-content">
             <div class="search-hit-name">
@@ -19,4 +321,10 @@
             </div>
           </div>
         </div>
-      </script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script><script src=/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js></script><script src=/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js></script></body></html>
+      </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js></script>
+<script src=/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js></script>
+</body>
+</html>
