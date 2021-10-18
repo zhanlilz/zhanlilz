@@ -54,6 +54,11 @@ There are three branches,
 * Branch `master`: where I work on my website. Any changes made here are not deployed on my actual personal website. I should preview changes here using the script `view.sh` in the top directory.
 * Branch `ready`: where I merge proofed changes from the branch `master`. Any changes made here will trigger a [Github workflow](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions) called `gh-pages.yml` that is saved under `.github/workflows/`. This workflow will generate the actual website files (all the HTML, CSS and such) and save/update them on the branch `gh-pages`.
 * Branch `gh-pages`: where the actual website files are stored and served by the Github Pages online under the URL of my personal webpage, https://zhanlilz.github.io/
+5. Preview the website, ini a terminal
+```bash
+# In the top directory of the website repository
+./view.sh
+```
 
 ## My own notes/tips on using the Academic Template
 
