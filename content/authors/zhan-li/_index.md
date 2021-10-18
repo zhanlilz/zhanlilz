@@ -21,7 +21,7 @@ bio: A technologist, environmentalist, and sometimes idealist.
 # Interests to show in About widget
 interests:
 - Ecosystem Ecology
-- Land-Water Nexus
+- Land-Water Complexes
 - Remote Sensing
 
 # Education to show in About widget
@@ -74,7 +74,7 @@ highlight_name: true
 ---
 Zhan Li's research is currently focused on observing and understanding (1)
 changes in the structure and functioning of ecosystems, and (2) their impacts on
-the energy, water, and carbon fluxes in the land-water nexus. He specializes in
+the energy, water, and carbon fluxes in land-water complexes. He specializes in
 remote sensing of land at a range of spatial scales (plot to global, fine to
 medium resolution), by multiple sensors (multispectral, lidar, radar) on
 different platforms (ground, airborne and satellite). He has worked on several
