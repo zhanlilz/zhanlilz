@@ -34,6 +34,27 @@ To help us develop this template and software sustainably under the MIT license,
 
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/starter-academic/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 
+## My own notes on quick start on a new Ubuntu computer
+1. Install Hugo
+    * Download hugo_VERSION_Linux-64bit.deb from https://github.com/gohugoio/hugo/releases
+    * Double click the .deb to install Hugo. 
+2. Install Hugo's Go dependency, in a terminal
+```bash
+sudo snap install --classic go
+```
+3. Install the [Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli), in a terminal
+```bash
+pip3 install -U academic
+```
+4. Clone the repository from my Github, in a terminal 
+```bash
+git clone git@github.com:zhanlilz/zhanlilz.github.io.git
+```
+There are three branches, 
+* Branch `master`: where I work on my website. Any changes made here are not deployed on my actual personal website. I should preview changes here using the script `view.sh` in the top directory.
+* Branch `ready`: where I merge proofed changes from the branch `master`. Any changes made here will trigger a [Github workflow](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions) called `gh-pages.yml` that is saved under `.github/workflows/`. This workflow will generate the actual website files (all the HTML, CSS and such) and save/update them on the branch `gh-pages`.
+* Branch `gh-pages`: where the actual website files are stored and served by the Github Pages online under the URL of my personal webpage, https://zhanlilz.github.io/
+
 ## My own notes/tips on using the Academic Template
 
 * content/publications: Add a pdf under a publication folder (e.g., li-2018)
