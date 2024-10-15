@@ -1,6 +1,6 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ""
+title: "Home"
 date: 2022-10-24
 type: landing
 
@@ -9,10 +9,12 @@ design:
   spacing: "6rem"
 
 sections:
-  - block: resume-biography-3
+  - block: resume-biography-zhanli
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: zhan-li
+      # If text below is empty, it extracts from content/authors/<username>/_index.md,
+      # the markdown content after the front matter (the part between --- and ---).
       text: ""
       # Show a call-to-action button under your biography? (optional)
       button:
@@ -30,6 +32,11 @@ sections:
           size: cover
           position: center
           parallax: false
+      biography:
+        style: 'text-align: justify;'
+  - block: resume-experience
+    content:
+      username: zhan-li
 #   - block: markdown
 #     content:
 #       title: '📚 My Research'
@@ -54,6 +61,7 @@ sections:
 #       view: article-grid
 #       columns: 2
   - block: collection
+    id: publications
     content:
       title: Recent Publications
       text: ""

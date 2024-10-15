@@ -6,10 +6,10 @@ title: The potential to characterize ecological data with terrestrial laser scan
 subtitle: ''
 summary: ''
 authors:
-- D A Orwig
-- P Boucher
-- I Paynter
-- E Saenz
+- David A. Orwig
+- Peter Boucher
+- Ian Paynter
+- Edward Saenz
 - Zhan Li
 - Crystal Schaaf
 tags: []
