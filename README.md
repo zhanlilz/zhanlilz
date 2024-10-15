@@ -74,7 +74,7 @@ There are three branches,
 5. Preview the website, ini a terminal
     ```bash
     # In the top directory of the website repository
-    ./view.sh
+    hugo server -D
     ```
 6. Update the Wowchemy website components that my website uses, refer to https://wowchemy.com/docs/hugo-tutorials/update/
 
