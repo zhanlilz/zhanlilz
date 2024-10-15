@@ -20,9 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: 
-- Remote Sensing Scientist
-- Geospatial Data Scientist & Engineer
+role: Remote Sensing Scientist
 
 # Organizations/Affiliations to show in About widget
 organizations:
